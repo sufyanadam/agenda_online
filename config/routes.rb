@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  root 'tasks#index'
+
+  get 'capture-task' => 'tasks#capture'
+
+  resources :tasks, only: [:create]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
