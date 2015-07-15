@@ -1,0 +1,15 @@
+.dropbox.search-results-container {
+  ul {
+    list-style: none;
+
+    li {
+      padding: 5px;
+
+      &:hover {
+        background: #666;
+        color: #fff;
+        cursor: pointer;
+      }
+    }
+  }
+}

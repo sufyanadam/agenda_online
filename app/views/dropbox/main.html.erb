@@ -1,0 +1,33 @@
+<h1>Select the folder with your org files</h1>
+
+<input type="text" name="search_term" id="search_term" />
+
+<div class="dropbox search-results-container"></div>
+
+<script type="text/javascript">
+document.getElementById('search_term').addEventListener('keyup', function(e) {
+    if (e.target.value.length >= 3) {
+      var xhr = new XMLHttpRequest();
+      xhr.onreadystatechange = function(e) {
+        if (xhr.readyState == XMLHttpRequest.DONE) {
+          displayResults(xhr.responseText);
+        }
+      }
+      xhr.open('get', '/dropbox/search?search_term=' + e.target.value);
+      xhr.send()
+    }
+  });
+
+  function displayResults(results) {
+    var list = document.createElement('ul');
+    JSON.parse(results).forEach(function(item, index, collection) {
+      var li = document.createElement('li');
+      var content = document.createTextNode(item.path);
+      li.appendChild(content);
+      list.appendChild(li);
+    });
+
+    var searchResultsContainer = document.getElementsByClassName('search-results-container')[0]
+    searchResultsContainer.appendChild(list);
+  }
+</script>

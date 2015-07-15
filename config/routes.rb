@@ -2,8 +2,18 @@ Rails.application.routes.draw do
   root 'tasks#index'
 
   get 'capture-task' => 'tasks#capture'
+  get 'signup'       => 'users#signup'
+  get 'agenda'       => 'tasks#index', as: 'agenda'
+
+  get  "dropbox/main"
+  post "dropbox/upload"
+  post "dropbox/search"
+  get  "dropbox/search"
+  get  "dropbox/auth_start"
+  get  "dropbox/auth_finish"
 
   resources :tasks, only: [:create]
+  resources :users, only: [:create]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
