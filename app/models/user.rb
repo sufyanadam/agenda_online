@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
 
   before_save :encrypt_password
 
-  validates_presence_of :dropbox_token
+  validates_presence_of :dropbox_token, :dropbox_uid
 
   def has_password?(password)
     self.password_digest == encrypt(password)

@@ -19,8 +19,8 @@
 require 'dropbox_sdk'
 require 'securerandom'
 
-APP_KEY = "dp6raabj9s7wz9h"
-APP_SECRET = "gwfij2wo6xuapc0"
+APP_KEY = "qe2gsn0l56xpz3x"
+APP_SECRET = "6ala3avdqkfhx16"
 
 class DropboxController < ApplicationController
   def main
@@ -66,21 +66,8 @@ class DropboxController < ApplicationController
     end
   end
 
-  def get_dropbox_client
-    if session[:access_token]
-      begin
-        access_token = session[:access_token]
-        DropboxClient.new(access_token)
-      rescue
-        # Maybe something's wrong with the access token?
-        session.delete(:access_token)
-        raise
-      end
-    end
-  end
-
   def get_web_auth()
-    redirect_uri = url_for(:action => 'auth_finish')
+    redirect_uri = url_for(action: 'auth_finish')
     DropboxOAuth2Flow.new(APP_KEY, APP_SECRET, redirect_uri, session, :dropbox_auth_csrf_token)
   end
 
@@ -96,7 +83,7 @@ class DropboxController < ApplicationController
     begin
       access_token, user_id, url_state = get_web_auth.finish(params)
       session[:access_token] = access_token
-      redirect_to :action => 'main'
+      redirect_to root_path
     rescue DropboxOAuth2Flow::BadRequestError => e
       render :text => "Error in OAuth 2 flow: Bad request: #{e}"
     rescue DropboxOAuth2Flow::BadStateError => e

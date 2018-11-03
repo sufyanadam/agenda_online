@@ -1,1 +1,4 @@
 <h1>Agenda</h1>
+
+
+<%= raw(Orgmode::Parser.new(@todo_file).to_html) %>

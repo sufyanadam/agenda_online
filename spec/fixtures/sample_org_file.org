@@ -1,0 +1,75 @@
+* Immigration
+  :PROPERTIES:
+  :CATEGORY: Immigration
+  :END:
+* House Maintenance
+  :PROPERTIES:
+  :CATEGORY: House
+  :END:
+** TODO Buy good charcoal/gas grill
+   It needs to have easy cleanup capabilities
+** TODO Buy nice chair to go with corner desk
+* Health
+  :PROPERTIES:
+  :CATEGORY: Health
+  :END:
+** TODO Get wisdom teeth taken out
+*** DONE Call dentist for referral oral surgeon
+    CLOSED: [2015-07-25 Sat 16:26]
+*** DONE Make consultation appointment with oral surgeon
+    CLOSED: [2015-07-25 Sat 16:27]
+*** TODO Get them out
+* App Ideas
+  :PROPERTIES:
+  :CATEGORY: App Ideas
+  :END:
+** justridewith.me
+   People driving to work would like to pick up anyone else _close_by_ who needs to go to the city. Sometimes
+   it is troublesome to drive to the carpool pickup position.
+   Sometimes it is troublesome for riders to travel to the pickup location.
+** goingprices.net
+   what are the going prices for <search term>?
+*** TODO research data sources for product data
+    What data feeds can be used?
+    Can just crawl web pages and use full-text search to give users what they want? (They want to find where they can buy product X at the cheapest price, online or in a local store)
+*** TODO Research affiliate marketing
+    How to make money online
+*** TODO Create a prototype app and see what happens
+** agenda.online
+   A site where I can:
+   1. Look at my TODOs
+   2. Mark any as done
+   3. Add new TODOs
+*** DONE Register the agenda.online domain
+    CLOSED: [2015-07-25 Sat 16:23]
+*** DONE Create the agenda_online project
+    CLOSED: [2015-07-25 Sat 16:23]
+*** TODO Index page can display all tasks in agenda form
+**** NEXT Retrieve files from Dropbox in org root dir
+**** TODO Parse and display in agenda mode
+* Work stuff
+  :PROPERTIES:
+  :CATEGORY: Work stuff
+  :END:
+** TODO Learn devops
+*** TODO Learn everything about linux
+**** TODO Create own personal cloud
+***** TODO Setup a machine with ubuntu server
+***** TODO Install virtualbox
+***** TODO Setup ssh and port forwarding
+***** TODO Learn command line commands for creating and managing VMs in virtualbox
+***** TODO Create a new VM and start learning Gentoo
+* Level Up
+  :PROPERTIES:
+  :CATEGORY: Level Up
+  :END:
+** TODO Learn how to track time in org mode
+** TODO Learn how to GTD in org mode
+** TODO Start doing programming pearls excersizes
+* Daily Routine
+  :PROPERTIES:
+  :CATEGORY: Daily Routine
+  :END:
+** TODO Solve programming pearls excersize
+** DONE Memorize next 3 more lines
+   CLOSED:[2015-07-27 Mon 00:13]
